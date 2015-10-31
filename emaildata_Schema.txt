@@ -1,0 +1,43 @@
+MSG_MAIN
+Name             Null     Type          
+---------------- -------- ------------- 
+MSG_CATEGORY     NOT NULL VARCHAR2(80)  
+MAX_RETRY_COUNT  NOT NULL NUMBER(2)     
+FROM_ADDRESS     NOT NULL VARCHAR2(80)  
+EMAIL_SUBJECT    NOT NULL VARCHAR2(255) 
+LAST_UPDATE_DATE NOT NULL TIMESTAMP(6)  
+LAST_UPDATE_USER NOT NULL VARCHAR2(100) 
+
+
+MSG_REQUEST
+Name                 Null     Type          
+-------------------- -------- ------------- 
+REQUEST_ID           NOT NULL NUMBER(22)    
+MSG_CATEGORY         NOT NULL VARCHAR2(80)  
+CREATE_TIME          NOT NULL TIMESTAMP(6)  
+ICONTACT_TEMPLATE_ID NOT NULL VARCHAR2(20)  
+FROM_ADDRESS                  VARCHAR2(80)  
+TO_ADDRESS                    VARCHAR2(255) 
+CC_ADDRESS                    VARCHAR2(255) 
+EMAIL_SUBJECT                 VARCHAR2(132) 
+WAC_ID                        VARCHAR2(40)  
+ACCOUNT_NUMBER                VARCHAR2(10)  
+SEND_METHOD                   VARCHAR2(10)  
+SEND_TIME                     TIMESTAMP(6)  
+RETRY_COUNT                   NUMBER(2)     
+MSG_STATUS           NOT NULL CHAR(1)       
+FAILURE_REASON                VARCHAR2(255) 
+FLEXIBLE_FIELD_1              VARCHAR2(255) 
+FLEXIBLE_FIELD_2              VARCHAR2(255) 
+LAST_UPDATE_DATE     NOT NULL TIMESTAMP(6)  
+LAST_UPDATE_USER     NOT NULL VARCHAR2(100) 
+
+
+MSG_VARIABLE
+Name               Null     Type          
+------------------ -------- ------------- 
+VARIABLE_ID        NOT NULL NUMBER(10)    
+REQUEST_ID         NOT NULL NUMBER(22)    
+DYNAMIC_PROP_NAME  NOT NULL VARCHAR2(80)  
+DYNAMIC_PROP_VALUE NOT NULL VARCHAR2(255) 
+
